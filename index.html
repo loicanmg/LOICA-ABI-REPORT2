@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOICA - Informe OOH</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #6B0F0F 0%, #8B1515 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 50px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF);
+            border-radius: 12px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 700;
+            color: white;
+        }
+        
+        h1 {
+            color: #6B0F0F;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .options {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .option-card {
+            background: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .option-card:hover {
+            background: #f0f0f0;
+            border-color: #6B0F0F;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(107, 15, 15, 0.15);
+        }
+        
+        .option-card.alternate:hover {
+            border-color: #4D96FF;
+            box-shadow: 0 8px 20px rgba(77, 150, 255, 0.15);
+        }
+        
+        .option-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .option-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .option-stats {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .stat-value {
+            font-weight: 600;
+            color: #6B0F0F;
+        }
+        
+        .option-card.alternate .stat-value {
+            color: #4D96FF;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .option-card {
+                padding: 20px;
+            }
+            
+            .option-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">LOICA</div>
+            <h1>Informe OOH</h1>
+            <p class="subtitle">Selecciona el conjunto de datos que deseas consultar</p>
+        </div>
+        
+        <div class="options">
+            <a href="report_original.html" class="option-card">
+                <div class="option-title">📊 Datos Originales</div>
+                <div class="option-description">Dataset inicial con ubicaciones seleccionadas</div>
+                <div class="option-stats">
+                    <div class="stat">
+                        <span>📍</span>
+                        <span class="stat-value">97</span>
+                        <span>ubicaciones</span>
+                    </div>
+                    <div class="stat">
+                        <span>🏷️</span>
+                        <span class="stat-value">14</span>
+                        <span>marcas</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="report_extended.html" class="option-card alternate">
+                <div class="option-title">📈 Datos Extendidos</div>
+                <div class="option-description">Dataset ampliado con cobertura completa</div>
+                <div class="option-stats">
+                    <div class="stat">
+                        <span>📍</span>
+                        <span class="stat-value">356</span>
+                        <span>ubicaciones</span>
+                    </div>
+                    <div class="stat">
+                        <span>🏷️</span>
+                        <span class="stat-value">8</span>
+                        <span>marcas</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>Informe Interactivo de Medios OOH (Out of Home)</p>
+            <p style="margin-top: 8px;">© 2026 LOICA - Todos los derechos reservados</p>
+        </div>
+    </div>
+</body>
+</html>
